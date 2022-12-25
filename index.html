@@ -11,138 +11,360 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
-  <nav style="position: fixed;" class="pull-left page-left-column">
+  
+  <nav  class="pull-left page-left-column test fixed">
+    
+    
+    
     <header class="nav-header">
       <a href="https://urfu.ru/ru/" target="" class="pull-left">
         <img src="img/logo.png" alt="УрФУ">
       </a>
     </header>
     <section>
-      <ul>
+      <ul >
         <li>
           <a href="index.html">
-            <p style="padding-bottom: 10px;
-            padding-left: 100px;
-            padding-top:46px; background-color:#838790;color: #ffffff"><img class="icon"
-                src="/img/проект (1).svg"></img>
+            <p class="headings-nav1" active>
               О проекте</p>
-            </span>
+
           </a>
         </li>
         <li>
           <a href="task.html">
-            <p style="padding-bottom: 10px;
-            padding-left: 100px;
-            padding-top:46px;"><img class="icon" style="bottom: 72%;" src="/img/Mask group.svg"></img>
+            <p class="headings-nav2 img-task">
               Задачи</p>
           </a>
         </li>
         <li>
           <a href="team.html">
-            <p style="padding-bottom: 10px;
-            padding-left: 100px;
-            padding-top:46px;"><img class="icon" style="top: 0px; height: 100px;" src="/img/команда.svg"></img>
+            <p class="headings-nav2 img-team">
               Команда</p>
           </a>
         </li>
 
         <li>
           <a href="lenta.html">
-            <p style="padding-bottom: 10px;
-            padding-left: 100px;
-            padding-top:46px;"><img class="icon" style="bottom: 56%; height: 22px;" src="/img/список.svg"></img>
+            <p class="headings-nav2 img-lenta">
               Лента событий</p>
           </a>
         </li>
 
         <li>
           <a href="doc.html">
-            <p style="padding-bottom: 10px;
-            padding-left: 100px;
-            padding-top:46px;"><img class="icon" style="bottom: 48%; height: 25px;" src="/img/документ.svg"></img>
+            <p class="headings-nav2 img-doc">
               Документы</p>
           </a>
         </li>
         <li>
           <a href="time.html">
-            <p style="padding-bottom: 10px;
-            padding-left: 100px;
-            padding-top:46px;"><img class="icon" style="bottom: 40%; height: 25px;" src="/img/календарь.svg"></img>
+            <p class="headings-nav2 img-time">
               Календарь</p>
           </a>
         </li>
         <li>
           <a href="discuss.html">
-            <p style="padding-bottom: 10px;
-            padding-left: 100px;
-            padding-top:46px;"><img class="icon" style="bottom: 30%;" src="/img/сообщения.svg"></img>
+            <p class="headings-nav2 img-discuss">
               Обсуждение</p>
           </a>
         </li>
       </ul>
-      <span block class="line">
-        <p style="
-        padding-bottom: 10px;
-        padding-left: 60px;
-        padding-top:30px; color:rgb(196,196,196)"><img class="icon" style="top:20px;left:15px"
-            src="/img/звездуля.svg"></img>
+      <br>
+      <span block class="line" >
+        <p class="headings-nav3 img-result">
           Результаты и оценки
         </p>
 
-        <ul>
+        <ul block>
           <li>
             <a href="markForIter.html">
-              <p style="padding-bottom: 10px;
-          padding-left: 75px;
-          padding-top:10px;font-size:14px;">Оценка по итерациям</p>
+              <p class="headings-nav5">Оценка по итерациям</p>
             </a>
           </li>
           <li>
             <a href="result.html">
-              <p style="padding-bottom: 10px;
-          padding-left: 75px;
-          padding-top:10px;font-size:14px;">Рещультаты проекта</p>
+              <p class="headings-nav5">Результаты проекта</p>
             </a>
           </li>
           <li>
             <a href="calculate.html">
-              <p style="padding-bottom: 10px;
-          padding-left: 75px;
-          padding-top:10px; font-size:14px;">Калькулятор TeamProject</p>
+              <p class="headings-nav5 marg-bot">Калькулятор TeamProject</p>
             </a>
           </li>
         </ul>
       </span>
     </section>
+  
   </nav>
+
+  <div class="background-dark">
+  <div id="help1" class="hidden modal">
+    <div id="help2">
+      <h2>Здравствуйте!</h2><br>
+      <p>Представляем Вам инструкцию по TeamProgect, которая поможет понять как функционирует сайт и составляется итоговая оценка за проект. Помимо этого, мы также предлагаем Вам поэкспентировать и посмотреть итоговую оценку за проект с помощью калькулятора TeamProject. </p>
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal()";">Далее</button>
+    </div>
+  </div>
+  <div id="help1-2" class="hidden modal">
+    <div id="help2-2">
+      <h2>Меню сайта</h2><br>
+      <p>На данный момент Вы находитесь на вкладке “О проекте”.</p>
+      
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal2();">Далее</button>
+    </div>
+  </div>
+  <div id="help1-3" class="hidden modal">
+    <div  id="help2-3">
+      <p>Подсказка о функционале сайта и правилах составления оценки.</p>
+      
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal3();">Далее</button>
+    </div>
+  </div>
+  
+  <div id="help1-4" class="hidden modal">
+    <div id="help2-4">
+      <p>Блок с описанием проекта Вашей команды.</p>
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal4();">Далее</button>
+    </div>
+  </div>
+
+  <div id="help1-5" class="hidden modal">
+    <div id="help2-5">
+      <p>Карточки с краткой информацией о проекте.</p>
+    <button type="button" class="btn-close" id="modal_close" onclick="closeModal();">Далее</button>
+    </div>
+  </div>
+</div>
+  
+  
+
   <section class="pull-right page-right-column">
     <section class="header-wrapper">
       <header class="header padding-x">
+        
         <div class="header-left"></div>
         <div class="header-right">
-          <span class ="help-block">
+          <span class="help-block">
             <span class="help-title">Справка по сервису:</span>
             <span class="help-links">
               <span class="title-wrapper">
-                <img src="img/иконки с инф.svg" title="Инструкции для студента">
+                <img src="{% static 'team_project_app/images/иконки с инф.svg' %}" title="Инструкции для студента">
+                
               </span>
             </span>
           </span>
-            <div class="dropdown">
-              <div class="user-menu">
-                <span class="user-name pull-left">Александр Алаев Александрович</span>
-                <div class="user-avatar">
-                  <div class="user-avatar-letters inactive">AA</div>
-                </div>
+          <div class="dropdown">
+            <div class="user-menu">
+              <span class="user-name pull-left">Александр Алаев Александрович</span>
+              <div class="user-avatar">
+                <div class="user-avatar-letters inactive">AA</div>
               </div>
             </div>
+          </div>
           </span>
         </div>
       </header>
     </section>
-  </section>
+    
+    <main class="content-main">
+      <div>
+        <div>
+          <section class="breadcrumbs">
+            <ul>
+              <li class="color-href">
+                <p>Список проектов</p>
+              </li>
+              <li>
+                <span class="arrow"></span>
+              </li>
+              <li class="text-muted">
+                <span>21/ЛКП-889-2022. 1С22S.LR. Обучающее приложение для прохождения компьютерной игры 49 (49)</span>
+              </li>
+            </ul>
+          </section>
+          <div class="about-project">
+            <h2 class="mb-s headings-h2">О проекте</h2>
+            <div>
+              <div class="row">
+                <div class="card-wrapper col-x1-12">
+                  <div class="card mb-s">
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Название проекта:1С22S.LR. Обучающее приложение для прохождения
+                          компьютерной игры </span>
+                      </p>
+                    </section>
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Организация заказчика:</span>
+                      </p>
+                    </section>
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Заказчик:</span>
+                        Зуев Лев Иванович
+                      <p> l.i.zyevv@urfu.ru</p>
+                      <p> 89110011001</p>
+                      </p>
+                    </section>
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Описание проекта:</span>
+                      <p>Веб-сервис (мобильное, desktop приложение) для обучения прохождения компьютерной игры</p>
+                      </p>
+                    </section>
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Цель:</span>
+                      <p>Создание обучающего приложения для прохождения компьютерной игры</p>
+                      </p>
+                    </section>
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Критерии оценок:</span>
+                      <p class="textInCard">Прототип сервиса, включающий выявление целевой аудитории,
+                        аналитику потребностей целевой аудитории, выявление требований к системе, дизайн-макеты
+                        приложения, спроектированное, запрограммированое и протестированное приложение.</p>
+                      </p>
+                    </section>
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Результаты:</span>
+                      <p>Прототип работающей системы</p>
+                      </p>
+                    </section>
+                    <section class="card-footer">
+                      <p>
+                        <span class="text-muted">Главный руководитель образовательной программы:</span>
+                        Зуев Лев Иванович
+                      </p>
+                    </section>
+                  </div>
+                </div>
+              <div class="container" style="display: flex; min-height: 233px;">
+                <div class="card-wrapper col-sm-6 col-xl-3" >
+                  <div about class="card mb-s">
+                    <section class="card-header">
+                      <img src="img/иконка кнопка.svg" >
+                      <h2 class ="alternative ml-auto rig ">Задачи</h2>
 
+                    </section>
+                    <section class="card-body">
+                      <ul class="text-right">
+                        <li>
+                          <span class="text-muted">Всего:</span> 7
+                        </li>
+                        <li>
+                          <span class="text-muted">Завершено:</span> 0
+                        </li>
+                        <li>
+                          <span class="text-muted">Мои:</span> 3
+                        </li>
+                        <li>
+                          <span class="text-muted">Истек срок:</span> 0
+                        </li>
+                      </ul>
+                    </section>
+                    <section class="card-footer text-right">
+                      <a href="task.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                    </section>
+                  </div>
+                </div>
+                <div class="card-wrapper col-sm-6 col-xl-3">
+                  <div about class="card mb-s">
+                    <section class="card-header ">
+                      <img src="img/иконка команда.svg" >
+                      <h2 class ="alternative ml-auto ">Команда</h2>
+                    </section>
+                    <section class="card-body">
+                      <ul class="text-right participants-svg">
+                        <li>
+                          <span class="text-muted">Участников:</span> 3
+                        </li>
+                        <li>
+                          <img src="img/участники.svg" >
+                        </li>
+                      </ul>
+                    </section>
+                    <section class="card-footer text-right">
+                      <a href="team.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                    </section>
+                  </div>
+                </div>
+                <div class="card-wrapper col-sm-6 col-xl-3">
+                  <div about class="card mb-s">
+                    <section class="card-header">
+                      <img src="img/иконка документ .svg">
+                      <h2 class ="alternative ml-auto">Документы</h2>
+
+                    </section>
+                    <section class="card-body ">
+                      <ul class="text-right ">
+                        <li>
+                          <span class="text-muted">Всего:</span> 3
+                        </li>
+                      </ul>
+
+                    </section>
+                    <section class="card-footer text-right">
+                      <a href="doc.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                    </section>
+                  </div>
+                </div>
+                <div class="card-wrapper col-sm-6 col-xl-3">
+                  <div about class="card mb-s">
+                    <section class="card-header">
+                      <img src="img/ик календарь (1).svg">
+                      <h2 class ="alternative ml-auto">Календарь</h2>
+
+                    </section>
+                    <section class="card-body">
+                      <ul class="text-right">
+                        <li>
+                          <span class="text-muted">Всего записей:</span> 3
+                        </li>
+                      </ul>
+
+                    </section>
+                    <section class="card-footer text-right">
+                      <a href="time.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                    </section>
+                  </div>
+                </div>
+                <div class="card-wrapper col-sm-6 col-xl-3">
+                  <div about class="card mb-s">
+                    <section class="card-header">
+                      <img src="img/иконка сообщения.svg">
+                      <h2 class ="alternative ml-auto">Обсуждения</h2>
+
+                    </section>
+                    <section class="card-body">
+                      <ul class="text-right">
+                        <li>
+                          <span class="text-muted">Всего:</span> 0
+                        </li>
+                      </ul>
+
+                    </section>
+                    <section class="card-footer text-right">
+                      <a href="discuss.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+
+                    </section>
+                  </div>
+                </div>
+                <div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+  </section>
+  <script src="main.js"></script>
+  <script>onload();</script>
 </body>
 
 </html>
