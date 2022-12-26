@@ -1,0 +1,272 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'team_project_app/css/style.css' %}" >
+  <link rel="stylesheet" href="{% static 'team_project_app/css/style1.css' %}" >
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <nav class="pull-left page-left-column test fixed">
+
+
+
+    <header class="nav-header">
+      <a href="https://urfu.ru/ru/" target="" class="pull-left">
+        <img src="{% static 'team_project_app/images/logo.png' %}" alt="УрФУ">
+      </a>
+    </header>
+    <section>
+      <ul>
+        <li>
+          <a href="/about">
+            <p class="headings-nav1">
+              О проекте</p>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/task">
+            <p class="headings-nav2 img-task" >
+              Задачи</p>
+          </a>
+        </li>
+        <li>
+          <a href="/team">
+            <p class="headings-nav2 img-team">
+              Команда</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="/lenta">
+            <p class="headings-nav2 img-lenta">
+              Лента событий</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="/doc">
+            <p class="headings-nav2 img-doc">
+              Документы</p>
+          </a>
+        </li>
+        <li>
+          <a href="/time">
+            <p class="headings-nav2 img-time">
+              Календарь</p>
+          </a>
+        </li>
+        <li>
+          <a href="/discuss">
+            <p class="headings-nav2 img-discuss">
+              Обсуждение</p>
+          </a>
+        </li>
+      </ul>
+      <br>
+      <span block class="line">
+        <p class="headings-nav3 img-result">
+          Результаты и оценки
+        </p>
+
+        <ul block>
+          <li>
+            <a href="/markForIter">
+              <p class="headings-nav5">Оценка по итерациям</p>
+            </a>
+          </li>
+          <li>
+            <a href="/result">
+              <p class="headings-nav5">Рещультаты проекта</p>
+            </a>
+          </li>
+          <li>
+            <a href="/calculate">
+              <p class="headings-nav5 marg-bot headings-nav5-active">Калькулятор TeamProject</p>
+            </a>
+          </li>
+        </ul>
+      </span>
+    </section>
+
+  </nav>
+  <section class="pull-right page-right-column">
+    <section class="header-wrapper">
+      <header class="header padding-x">
+        <div class="header-left"></div>
+        <div class="header-right">
+          <span class="help-block">
+            <span class="help-title">Справка по сервису:</span>
+            <span class="help-links">
+              <span class="title-wrapper">
+                <img src="{% static 'team_project_app/images/иконки с инф.svg' %}" title="Инструкции для студента">
+              </span>
+            </span>
+          </span>
+          <div class="dropdown">
+            <div class="user-menu">
+              <span class="user-name pull-left">Александр Алаев Александрович</span>
+              <div class="user-avatar">
+                <div class="user-avatar-letters inactive">AA</div>
+              </div>
+            </div>
+          </div>
+          </span>
+        </div>
+      </header>
+    </section>
+    <main class="content-main">
+      <div>
+        <div>
+          <section class="breadcrumbs">
+            <ul>
+              <li class="color-href">
+                <p>Список проектов</p>
+              </li>
+              <li>
+                <span class="arrow"></span>
+              </li>
+              <li class="text-muted">
+                <span>21/ЛКП-889-2022. 1С22S.LR. Обучающее приложение для прохождения компьютерной игры 49 (49)</span>
+              </li>
+            </ul>
+          </section>
+          <div>
+            <div class="page-title-row mb-s">
+              <h2 class="mb-xs headings-h2">Калькулятор TeamProject</h2>
+            </div>
+            <div class="row">
+              <div class="card-wrapper col-x1-12">
+                <div class="card">
+                  <div class="table-wrapper">
+                    <div class="inner">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                      </table>
+                      <div align="center" name="table" id="table"></div>
+                      
+                      <div align="center">
+                        <form name="f1">
+                          N = <select name="N_select" id="N_select"></select>
+                          M = <select name="M_select" id="M_select"></select>
+                          <input type="button" value="New" onclick="create()">
+                          <input type="button" value="Calc" onclick="get()">
+                        </form>
+                        <p id="result"></p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+  </section>
+  <script src="{% static 'team_project_app/js/main.js' %}"></script>
+  <script>
+    function DynamicTable(N, M, tableId) { //Объект Динамическая таблица
+      this.N = N; this.M = M;
+      var tableDiv;
+
+      this.table = function () { //Формирование таблицы в элементе tableId
+        tableDiv = document.getElementById(tableId);
+        var tbl = document.createElement('table');
+        tbl.setAttribute('align', 'center');
+        tbl.setAttribute('border', '1');
+        var tbdy = document.createElement('tbody');
+        for (var i = 1; i <= N; i++) {
+          var tr = document.createElement('tr');
+          for (var j = 1; j <= M; j++) {
+            var td = document.createElement('td');
+            var inp = document.createElement('input');
+            inp.setAttribute('type', 'input');
+            inp.setAttribute('size', '5'); //видимый размер
+            inp.setAttribute('maxlength', '4'); //макс.длина ввода
+            inp.setAttribute('id', 'c' + i + '' + j); //inp.id = "";
+            inp.setAttribute('name', 'c' + i + '' + j);
+            td.appendChild(inp);
+            tr.appendChild(td);
+          }
+          tbdy.appendChild(tr);
+        }
+        tbl.appendChild(tbdy);
+        tableDiv.appendChild(tbl);
+      }
+
+      this.erase = function () { //Удалить старую таблицу
+        while (tableDiv.firstChild) {
+          tableDiv.removeChild(tableDiv.firstChild);
+        }
+      }
+
+      this.calc = function () { //Вычисления
+        var s = 0;
+        for (var i = 1; i <= N; i++)
+          for (var j = 1; j <= M; j++) {
+            var n = parseFloat(document.getElementById("c" + i + "" + j).value);
+            if (isNaN(n)) document.getElementById("c" + i + "" + j).value = '0';
+            else s += n;
+          }
+        document.getElementById('result').innerHTML = s;
+      }
+    }
+
+    var task; //Объект таблицы
+
+    function get() { //Вычисления по заполненной таблице
+      task.calc();
+    }
+
+    function create() { //По кнопке New создать новую таблицу нужного размера
+      var n = parseInt(document.f1.N_select.value);
+      if (isNaN(n)) {
+        n = 3; document.f1.N_select.value = n;
+      }
+      var m = parseInt(document.f1.M_select.value);
+      if (isNaN(m)) {
+        m = 3; document.f1.M_select.value = m;
+      }
+      task.erase();
+      task = new DynamicTable(n, m, 'table');
+      task.table();
+    }
+
+    function putLists(low, hi, def) { //Получить списки значений для размерностей таблицы
+      var s = '';
+      for (var i = low; i <= hi; i++) s += '<option value="' + i + '"' +
+        (i == def ? ' selected' : '') + '>' + i + "\n";
+      document.getElementById('N_select').innerHTML = s;
+      document.getElementById('M_select').innerHTML = s;
+    }
+
+    window.addEventListener('load', function (e) {
+      //По загрузке страницы создать объекты по умолчанию
+      putLists(2, 9, 3);
+      task = new DynamicTable(3, 3, 'table');
+      task.table();
+    }, false); 
+  </script>
+</body>
+
+</html>
