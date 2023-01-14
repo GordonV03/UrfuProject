@@ -83,7 +83,9 @@ window.onclick = function(event) {
   if (event.target.classList.contains("modal8")) {
     closeModalres()
   }
- 
+  if (event.target.classList.contains("modal9")) {
+    closeModalcalc()
+  }
 }
 
 function shwoModal1Task(){
@@ -239,4 +241,79 @@ function closeModalres(){
   modal4.classList.add("hidden")
   var modal5 = document.getElementById('help5-1-res');
   modal5.classList.add("hidden")
+}
+
+
+
+
+
+function closeModalcalc(){
+  var modal = document.getElementById('help1-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help2-1-calc');
+  modal2.classList.add("hidden")
+  var modal3 = document.getElementById('help3-1-calc');
+  modal3.classList.add("hidden")
+  var modal4 = document.getElementById('help4-1-calc');
+  modal4.classList.add("hidden")
+  var modal5 = document.getElementById('help5-1-calc');
+  modal5.classList.add("hidden")
+  var modal6 = document.getElementById('help6-1-calc');
+  modal6.classList.add("hidden")
+  var modal7 = document.getElementById('help7-1-calc');
+  modal7.classList.add("hidden")
+  var modal8 = document.getElementById('help8-1-calc');
+  modal8.classList.add("hidden")
+  var modal9 = document.getElementById('help9-1-calc');
+  modal9.classList.add("hidden")
+}
+
+function closeModalcalc1(){
+  var modal = document.getElementById('help1-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help2-1-calc');
+  modal2.classList.remove("hidden")
+}
+
+function closeModalcalc2(){
+  var modal = document.getElementById('help2-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help3-1-calc');
+  modal2.classList.remove("hidden")
+}
+function closeModalcalc3(){
+  var modal = document.getElementById('help3-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help4-1-calc');
+  modal2.classList.remove("hidden")
+}
+function closeModalcalc4(){
+  var modal = document.getElementById('help4-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help5-1-calc');
+  modal2.classList.remove("hidden")
+}
+function closeModalcalc5(){
+  var modal = document.getElementById('help5-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help6-1-calc');
+  modal2.classList.remove("hidden")
+}
+function closeModalcalc6(){
+  var modal = document.getElementById('help6-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help7-1-calc');
+  modal2.classList.remove("hidden")
+}
+function closeModalcalc7(){
+  var modal = document.getElementById('help7-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help8-1-calc');
+  modal2.classList.remove("hidden")
+}
+function closeModalcalc8(){
+  var modal = document.getElementById('help8-1-calc');
+  modal.classList.add("hidden")
+  var modal2 = document.getElementById('help9-1-calc');
+  modal2.classList.remove("hidden")
 }
