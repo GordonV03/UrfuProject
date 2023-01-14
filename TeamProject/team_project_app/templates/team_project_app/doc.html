@@ -6,12 +6,122 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Документы</title>
   <link rel="stylesheet" href="{% static 'team_project_app/css/style.css' %}" >
   <link rel="stylesheet" href="{% static 'team_project_app/css/style1.css' %}" >
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
+<style>
+    .img-about {
+    background-image: url("{% static 'team_project_app/images/проект (1).svg' %}" );
+    background-repeat: no-repeat;
+    background-size: 17px,17px;
+    background-position: 50px 15px;
+    }
+
+    .img-task {
+    background-image: url("{% static 'team_project_app/images/Mask group.svg' %}" );
+    background-repeat: no-repeat;
+    background-size: 13px,15px;
+    background-position: 50px 15px;
+    }
+
+    .img-team{
+      background-image: url("{% static 'team_project_app/images/команда.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 30px,27px;
+      background-position: 43px 8px;
+    }
+
+    .img-lenta{
+      background-image: url("{% static 'team_project_app/images/список.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 15px,15px;
+      background-position: 50px 15px;
+    }
+
+    .img-doc{
+      background-image: url("{% static 'team_project_app/images/документ.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 15px,15px;
+      background-position: 50px 15px;
+    }
+
+    .img-time{
+      background-image: url("{% static 'team_project_app/images/календарь.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 14px,14px;
+      background-position: 52px 15px;
+    }
+
+    .img-discuss{
+      background-image: url("{% static 'team_project_app/images/сообщения.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 16px,16px;
+      background-position: 52px 15px;
+    }
+
+    .img-result{
+      background-image: url("{% static 'team_project_app/images/звездуля.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 17px,15px;
+      background-position: 33px 15px;
+    }
+
+    .img-file-doc{
+      background-image: url("{% static 'team_project_app/images/documents.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 16px,16px;
+      background-position: 10px 10px;
+      padding-left: 30px;
+
+    }
+    .img-plus-doc{
+      background-image: url("{% static 'team_project_app/images/plus.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 14px,14px;
+      background-position: 10px 12px;
+      padding-left: 30px;
+
+    }
+
+    .img-folder1-doc{
+      background-image: url("{% static 'team_project_app/images/папка с загрузкой (1).svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 45px,35px;
+      background-position: 30px 25px;
+      padding:0px 80px;
+    }
+    .img-folder2-doc{
+      background-image: url("{% static 'team_project_app/images/папка с загрузкой.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 45px,35px;
+      background-position: 30px 25px;
+      padding:0px 80px;
+    }
+    .img-folder3-doc{
+      background-image: url("{% static 'team_project_app/images/папка (3).svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 45px,35px;
+      background-position: 30px 25px;
+      padding:0px 80px;
+    }
+    .img-folder4-doc{
+      background-image: url("{% static 'team_project_app/images/папка с загрузкой.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 45px,35px;
+      background-position: 30px 25px;
+      padding:0px 80px;
+    }
+    .img-folder5-doc{
+      background-image: url("{% static 'team_project_app/images/папка (3).svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 45px,35px;
+      background-position: 30px 25px;
+      padding:0px 80px;
+    }
+</style>
 
 <body>
 
@@ -28,7 +138,7 @@
       <ul>
         <li>
           <a href="/about">
-            <p class="headings-nav1">
+            <p class="headings-nav1 img-about">
               О проекте</p>
             </span>
           </a>
@@ -55,7 +165,7 @@
 
         <li>
           <a href="/doc">
-            <p class="headings-nav2 img-doc headings-active">
+            <p class="headings-nav2 img-doc" active>
               Документы</p>
           </a>
         </li>

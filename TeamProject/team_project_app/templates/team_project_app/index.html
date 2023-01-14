@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="ru">
 
 <head>
@@ -12,6 +12,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
+<style>
+    .img-about {
+    background-image: url("{% static 'team_project_app/images/проект (1).svg' %}" );
+    background-repeat: no-repeat;
+    background-size: 17px,17px;
+    background-position: 50px 15px;
+    }
+
+    .img-task {
+    background-image: url("{% static 'team_project_app/images/Mask group.svg' %}" );
+    background-repeat: no-repeat;
+    background-size: 13px,15px;
+    background-position: 50px 15px;
+    }
+
+    .img-team{
+      background-image: url("{% static 'team_project_app/images/команда.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 30px,27px;
+      background-position: 43px 8px;
+    }
+
+    .img-lenta{
+      background-image: url("{% static 'team_project_app/images/список.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 15px,15px;
+      background-position: 50px 15px;
+    }
+
+    .img-doc{
+      background-image: url("{% static 'team_project_app/images/документ.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 15px,15px;
+      background-position: 50px 15px;
+    }
+
+    .img-time{
+      background-image: url("{% static 'team_project_app/images/календарь.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 14px,14px;
+      background-position: 52px 15px;
+    }
+
+    .img-discuss{
+      background-image: url("{% static 'team_project_app/images/сообщения.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 16px,16px;
+      background-position: 52px 15px;
+    }
+
+    .img-result{
+      background-image: url("{% static 'team_project_app/images/звездуля.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 17px,15px;
+      background-position: 33px 15px;
+    }
+</style>
 
 <body>
   
@@ -28,8 +85,9 @@
       <ul >
         <li>
           <a href="/about">
-            <p class="headings-nav1 headings-active">
+            <p class="headings-nav1 img-about" active>
               О проекте</p>
+
           </a>
         </li>
         <li>
@@ -104,7 +162,7 @@
     <div id="help2">
       <h2>Здравствуйте!</h2><br>
       <p>Представляем Вам инструкцию по TeamProgect, которая поможет понять как функционирует сайт и составляется итоговая оценка за проект. Помимо этого, мы также предлагаем Вам поэкспентировать и посмотреть итоговую оценку за проект с помощью калькулятора TeamProject. </p>
-    <button type="button" class="btn-close"  onclick="shwoModal();">Далее</button>
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal()";">Далее</button>
     </div>
   </div>
   <div id="help1-2" class="hidden modal">
@@ -112,28 +170,28 @@
       <h2>Меню сайта</h2><br>
       <p>На данный момент Вы находитесь на вкладке “О проекте”.</p>
       
-    <button type="button" class="btn-close"  onclick="shwoModal2();">Далее</button>
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal2();">Далее</button>
     </div>
   </div>
   <div id="help1-3" class="hidden modal">
     <div  id="help2-3">
       <p>Подсказка о функционале сайта и правилах составления оценки.</p>
       
-    <button type="button" class="btn-close"  onclick="shwoModal3();">Далее</button>
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal3();">Далее</button>
     </div>
   </div>
   
   <div id="help1-4" class="hidden modal">
     <div id="help2-4">
       <p>Блок с описанием проекта Вашей команды.</p>
-    <button type="button" class="btn-close"  onclick="shwoModal4();">Далее</button>
+    <button type="button" class="btn-close" id="modal_close" onclick="shwoModal4();">Далее</button>
     </div>
   </div>
 
   <div id="help1-5" class="hidden modal">
     <div id="help2-5">
       <p>Карточки с краткой информацией о проекте.</p>
-    <button type="button" class="btn-close"  onclick="closeModal();">Далее</button>
+    <button type="button" class="btn-close" id="modal_close" onclick="closeModal();">Далее</button>
     </div>
   </div>
 </div>
@@ -247,7 +305,7 @@
                 <div class="card-wrapper col-sm-6 col-xl-3" >
                   <div about class="card mb-s">
                     <section class="card-header">
-                      <img src="{% static 'team_project_app/images/иконка кнопка.svg' %}" >
+                      <img src="{% static 'team_project_app/images/иконка кнопка.svg' %}">
                       <h2 class ="alternative ml-auto rig ">Задачи</h2>
 
                     </section>
@@ -268,14 +326,14 @@
                       </ul>
                     </section>
                     <section class="card-footer text-right">
-                      <a href="task.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                      <a href="/task" class ="btn btn-default btn-xs color-btn">Перейти</a>
                     </section>
                   </div>
                 </div>
                 <div class="card-wrapper col-sm-6 col-xl-3">
                   <div about class="card mb-s">
                     <section class="card-header ">
-                      <img  src="{% static 'team_project_app/images/иконка команда.svg' %}" >
+                      <img src="{% static 'team_project_app/images/иконка команда.svg' %}">
                       <h2 class ="alternative ml-auto ">Команда</h2>
                     </section>
                     <section class="card-body">
@@ -284,12 +342,12 @@
                           <span class="text-muted">Участников:</span> 3
                         </li>
                         <li>
-                          <img  src="{% static 'team_project_app/images/участники.svg' %}">
+                          <img src="{% static 'team_project_app/images/участники.svg' %}">
                         </li>
                       </ul>
                     </section>
                     <section class="card-footer text-right">
-                      <a href="team.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                      <a href="/team" class ="btn btn-default btn-xs color-btn">Перейти</a>
                     </section>
                   </div>
                 </div>
@@ -309,7 +367,7 @@
 
                     </section>
                     <section class="card-footer text-right">
-                      <a href="doc.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                      <a href="/doc" class ="btn btn-default btn-xs color-btn">Перейти</a>
                     </section>
                   </div>
                 </div>
@@ -329,7 +387,7 @@
 
                     </section>
                     <section class="card-footer text-right">
-                      <a href="time.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                      <a href="/time" class ="btn btn-default btn-xs color-btn">Перейти</a>
                     </section>
                   </div>
                 </div>
@@ -349,7 +407,7 @@
 
                     </section>
                     <section class="card-footer text-right">
-                      <a href="discuss.html" class ="btn btn-default btn-xs color-btn">Перейти</a>
+                      <a href="/discuss" class ="btn btn-default btn-xs color-btn">Перейти</a>
 
                     </section>
                   </div>
