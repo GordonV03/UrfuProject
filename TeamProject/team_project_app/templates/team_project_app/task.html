@@ -6,12 +6,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Задачи</title>
   <link rel="stylesheet" href="{% static 'team_project_app/css/style.css' %}" >
   <link rel="stylesheet" href="{% static 'team_project_app/css/style1.css' %}" >
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
+<style>
+    .img-about {
+    background-image: url("{% static 'team_project_app/images/проект (1).svg' %}" );
+    background-repeat: no-repeat;
+    background-size: 17px,17px;
+    background-position: 50px 15px;
+    }
+
+    .img-task {
+    background-image: url("{% static 'team_project_app/images/Mask group.svg' %}" );
+    background-repeat: no-repeat;
+    background-size: 13px,15px;
+    background-position: 50px 15px;
+    }
+
+    .img-team{
+      background-image: url("{% static 'team_project_app/images/команда.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 30px,27px;
+      background-position: 43px 8px;
+    }
+
+    .img-lenta{
+      background-image: url("{% static 'team_project_app/images/список.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 15px,15px;
+      background-position: 50px 15px;
+    }
+
+    .img-doc{
+      background-image: url("{% static 'team_project_app/images/документ.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 15px,15px;
+      background-position: 50px 15px;
+    }
+
+    .img-time{
+      background-image: url("{% static 'team_project_app/images/календарь.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 14px,14px;
+      background-position: 52px 15px;
+    }
+
+    .img-discuss{
+      background-image: url("{% static 'team_project_app/images/сообщения.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 16px,16px;
+      background-position: 52px 15px;
+    }
+
+    .img-result{
+      background-image: url("{% static 'team_project_app/images/звездуля.svg' %}" );
+      background-repeat: no-repeat;
+      background-size: 17px,15px;
+      background-position: 33px 15px;
+    }
+</style>
 
 <body>
 
@@ -28,14 +85,14 @@
       <ul>
         <li>
           <a href="/about">
-            <p class="headings-nav1">
+            <p class="headings-nav1 img-about">
               О проекте</p>
             </span>
           </a>
         </li>
         <li>
           <a href="/task">
-            <p class="headings-nav2 img-task headings-active">
+            <p class="headings-nav2 img-task" active>
               Задачи</p>
           </a>
         </li>
@@ -119,8 +176,8 @@
     <div id="help3-2-task">
       
       <p>
-        Визуализация информация задачи проекта. </p>
-      <button type="button" class="btn-close"  onclick="closeModal1()" ;">Далее</button>
+        Визуализация информации задачи проекта. </p>
+      <button type="button" class="btn-close"  onclick="closeModal1()">Далее</button>
     </div>
   </div>
   <section class="pull-right page-right-column">
